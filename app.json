@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "ZenRoute",
+    "slug": "zenrout",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zenrout.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ZenRoute needs your location to show nearby jeepneys and track your position on the map.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "ZenRoute needs your location to track jeepney locations in real-time, even when the app is in the background.",
+        "NSLocationAlwaysUsageDescription": "ZenRoute needs your location to track jeepney locations in real-time, even when the app is in the background.",
+        "UIBackgroundModes": [
+          "location"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.zenrout.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ],
+      "minSdkVersion": 21,
+      "targetSdkVersion": 34
+    },
+    "web": {},
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow ZenRoute to use your location to track jeepney locations in real-time, even when the app is in the background.",
+          "locationWhenInUsePermission": "ZenRoute needs your location to show nearby jeepneys and track your position on the map."
+        }
+      ]
+    ]
+  }
+}
+
