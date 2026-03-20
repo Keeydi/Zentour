@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useState } from 'react';
 import {
   View,
@@ -533,7 +534,7 @@ const SignupScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FF6B35', // Orange matching landing page
+    backgroundColor: colors.primary,
   },
   scrollContent: {
     flexGrow: 1,

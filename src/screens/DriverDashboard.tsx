@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useState, useEffect } from 'react';
 import {
   View,
@@ -368,7 +369,7 @@ const DriverDashboard: React.FC = () => {
             {routePathCoordinates && routePathCoordinates.length >= 2 ? (
               <Polyline
                 coordinates={routePathCoordinates}
-                strokeColor="#FFC107"
+                strokeColor={colors.route}
                 strokeWidth={6}
                 lineCap="round"
                 lineJoin="round"
@@ -381,7 +382,7 @@ const DriverDashboard: React.FC = () => {
                     latitude: stop.latitude,
                     longitude: stop.longitude,
                   }))}
-                  strokeColor="#FFC107"
+                  strokeColor={colors.route}
                   strokeWidth={6}
                   lineCap="round"
                   lineJoin="round"
@@ -412,7 +413,7 @@ const DriverDashboard: React.FC = () => {
               }}
               title="Your Location"
               description={driver?.jeepneyId ? `Jeepney ${driver.jeepneyId}` : 'Driver Location'}
-              pinColor={isOnline ? '#1E88E5' : '#FF9800'} // Blue when online, orange when offline
+              pinColor={isOnline ? '#1E88E5' : colors.attention}
             />
 
             {/* Other Jeepneys Markers */}
@@ -444,7 +445,7 @@ const DriverDashboard: React.FC = () => {
             <Text style={styles.legendTitle}>Map Legend</Text>
             <View style={styles.legendItemsContainer}>
               <View style={styles.legendItem}>
-                <View style={[styles.legendDot, { backgroundColor: isOnline ? '#1E88E5' : '#FF9800' }]} />
+                <View style={[styles.legendDot, { backgroundColor: isOnline ? '#1E88E5' : colors.attention }]} />
                 <Text style={styles.legendText}>You</Text>
               </View>
               {onlineJeepneys.length > 0 && (

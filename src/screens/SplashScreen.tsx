@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, Text, Animated, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -59,7 +60,7 @@ const SplashScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FF6B35', // Orange matching the theme
+    backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
   },

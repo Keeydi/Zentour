@@ -3,6 +3,7 @@
  * Displays multiple jeepneys with their ETAs for comparison
  */
 
+import { colors } from '../theme/colors';
 import React from 'react';
 import {
   View,
@@ -162,7 +163,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 8,
     right: 8,
-    backgroundColor: '#FFD700',
+    backgroundColor: colors.highlight,
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 12,

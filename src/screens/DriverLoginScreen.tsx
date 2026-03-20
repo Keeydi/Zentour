@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useState } from 'react';
 import {
   View,
@@ -159,7 +160,7 @@ const DriverLoginScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FF6B35',
+    backgroundColor: colors.primary,
   },
   scrollContent: {
     flexGrow: 1,

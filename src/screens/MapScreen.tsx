@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -267,7 +268,7 @@ const MapScreen: React.FC = () => {
         {routePathCoordinates.length >= 2 && (
           <Polyline
             coordinates={routePathCoordinates}
-            strokeColor="#FFC107"
+            strokeColor={colors.route}
             strokeWidth={6}
             lineCap="round"
             lineJoin="round"
@@ -309,7 +310,7 @@ const MapScreen: React.FC = () => {
             }}
             title={`Jeepney ${jeepney.id}`}
             description={`Route: ${jeepney.route || 'Anonas-Lagro'}`}
-            pinColor={selectedJeepney === jeepney.id ? '#FF9800' : '#4CAF50'}
+            pinColor={selectedJeepney === jeepney.id ? colors.accent : '#4CAF50'}
             onPress={() => {
               setSelectedJeepney(jeepney.id);
             }}
@@ -331,7 +332,7 @@ const MapScreen: React.FC = () => {
           <Marker
             coordinate={destination}
             title="Destination"
-            pinColor="#FF5722"
+            pinColor={colors.pinStrong}
           />
         )}
       </MapView>

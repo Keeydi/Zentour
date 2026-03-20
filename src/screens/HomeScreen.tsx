@@ -1,5 +1,6 @@
+import { colors } from '../theme/colors';
 import React, { useState, useEffect, useRef } from 'react';
-import { View, StyleSheet, ActivityIndicator, Text, KeyboardAvoidingView, Platform, Keyboard } from 'react-native';
+import { View, StyleSheet, ActivityIndicator, Text, KeyboardAvoidingView, Platform, Keyboard, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import MapView, { Marker, Polyline } from 'react-native-maps';
@@ -364,7 +365,7 @@ const HomeScreen: React.FC = () => {
           {routePathCoordinates && routePathCoordinates.length >= 2 ? (
             <Polyline
               coordinates={routePathCoordinates}
-              strokeColor="#FFC107"
+              strokeColor={colors.route}
               strokeWidth={6}
               lineCap="round"
               lineJoin="round"
@@ -377,7 +378,7 @@ const HomeScreen: React.FC = () => {
                   latitude: stop.latitude,
                   longitude: stop.longitude,
                 }))}
-                strokeColor="#FFC107"
+                strokeColor={colors.route}
                 strokeWidth={6}
                 lineCap="round"
                 lineJoin="round"

@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
@@ -16,7 +17,7 @@ const SeatAvailabilityBadge: React.FC<SeatAvailabilityBadgeProps> = ({
 
   const getStatusColor = () => {
     if (isFull) return '#f44336'; // Red
-    if (isAlmostFull) return '#ff9800'; // Orange
+    if (isAlmostFull) return colors.accent;
     return '#4CAF50'; // Green
   };
 

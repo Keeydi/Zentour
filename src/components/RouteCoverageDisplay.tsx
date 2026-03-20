@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useState } from 'react';
 import {
   View,
@@ -90,7 +91,7 @@ const RouteCoverageDisplay: React.FC<RouteCoverageDisplayProps> = ({
                   }}
                   title={stop.name}
                   description={stop.description || `Stop ${index + 1}`}
-                  pinColor={selectedStop === stop ? '#FF9800' : '#4CAF50'}
+                  pinColor={selectedStop === stop ? colors.accent : '#4CAF50'}
                   onPress={() => setSelectedStop(stop)}
                 />
               ))}

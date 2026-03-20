@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React, { useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -160,7 +161,7 @@ const LandingScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FF6B35', // Orange matching the tricycle sidecar
+    backgroundColor: colors.primary,
   },
   scrollContent: {
     flexGrow: 1,
@@ -262,7 +263,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingBottom: 40,
     paddingTop: 10,
-    backgroundColor: '#FF6B35',
+    backgroundColor: colors.primary,
     gap: 16,
   },
   primaryButton: {

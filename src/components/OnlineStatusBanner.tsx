@@ -1,3 +1,4 @@
+import { colors } from '../theme/colors';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useJeepneyLocation } from '../contexts/JeepneyLocationContext';
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4CAF50',
   },
   empty: {
-    backgroundColor: '#FF9800',
+    backgroundColor: colors.attention,
   },
   loading: {
     backgroundColor: '#2196F3',
